@@ -2,72 +2,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Mahesh Borkar | Portfolio</title>
+<meta name="description" content="Portfolio of Mahesh Borkar - Business Development Professional">
+<link rel="icon" href="favicon.ico">
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0d0d0d;
-  color: white;
-  text-align: center;
-}
-header {
-  padding: 50px 20px;
-}
-h1 {
-  font-size: 3em;
-}
-h2 {
-  font-weight: 400;
-  color: #aaa;
-}
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-footer {
-  background: #111;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #777;
-}
-a {
-  color: #00bfff;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    overflow-x: hidden;
+  }
+  /* Scroll progress bar */
+  #progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff8000, #ff4500);
+    z-index: 1000;
+  }
+  header {
+    text-align: center;
+    padding: 80px 20px 40px;
+    position: relative;
+  }
+  header h1 {
+    font-size: 4rem;
+    background: linear-gradient(90deg, #ff8000, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 3s infinite;
+    margin: 0;
+  }
+  header h2 {
+    font-weight: 300;
+    margin: 10px 0;
+    color: white;
+  }
+  header .signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: white;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite alternate;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  h3 {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #ff8000, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+  }
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  .about-content img {
+    width: 200px;
+    border-radius: 10px;
+    border: 3px solid #ff8000;
+  }
+  .buttons {
+    margin-top: 20px;
+  }
+  .buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: linear-gradient(90deg, #ff8000, #ff4500);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .buttons a:hover {
+    opacity: 0.8;
+  }
+  footer {
+    background: #111;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
+<div id="progressBar"></div>
 <header>
-  <img src="assets/DSC_8832-1.jpg" alt="Mahesh Borkar" style="width:150px;border-radius:50%;border:3px solid #00bfff;">
-  <h1>Mahesh Borkar</h1>
-  <h2>Business Development Executive | Aspiring Market Research Analyst</h2>
+  <h1>PORTFOLIO</h1>
+  <h2>Business Development Professional</h2>
+  <div class="signature">Mahesh Borkar</div>
+  <div class="marquee"><span>MAHESH BORKAR ★ MAHESH BORKAR ★ MAHESH BORKAR ★ </span></div>
 </header>
 
 <section id="about">
-  <h2>About Me</h2>
-  <p>Proactive and target-driven professional with strong experience in B2B SaaS product sales, international client acquisition, and market research. Skilled at driving revenue, building long-term relationships, and delivering data-driven insights to inform strategic decisions.</p>
+  <h3>About Me</h3>
+  <div class="about-content">
+    <img src="assets/DSC_8832-1.jpg" alt="Mahesh Borkar">
+    <p>Immediate Joiner | Sales and Business Development professional with 3 years of experience driving B2B SaaS and B2C sales across Europe, the USA, and India. Proven track record in lead generation, strategic market expansion, and stakeholder relationship management.</p>
+  </div>
 </section>
 
 <section id="skills">
-  <h2>Skills</h2>
-  <p>Business Development | Market Research | CRM (HubSpot, Pipedrive) | Data Analysis | Communication | Lead Generation</p>
+  <h3>Skills</h3>
+  <p>International Business Development | Lead Generation | CRM Management | Sales Strategy | Market Research</p>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:mahesh@example.com">mahesh@example.com</a></p>
+  <h3>Contact</h3>
+  <p>Email: mahesh@example.com</p>
   <p>LinkedIn: <a href="https://linkedin.com/in/mahesh-borkar" target="_blank">linkedin.com/in/mahesh-borkar</a></p>
 </section>
 
 <footer>
-  <p>&copy; 2025 Mahesh Borkar. All Rights Reserved.</p>
+  <div class="buttons">
+    <a href="Mahesh-Borkar-Resume.pdf" download>Download Resume</a>
+    <a href="linkedin-banner-right-black.png" download>Download LinkedIn Banner</a>
+  </div>
+  <p>&copy; 2025 Mahesh Borkar — All Rights Reserved</p>
 </footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById('progressBar').style.width = scrolled + "%";
+  });
+</script>
 </body>
 </html>
